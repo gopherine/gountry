@@ -1,4 +1,10 @@
-package main
+// package main
+
+// func main() {
+
+// }
+
+package gountry
 
 import (
 	"errors"
