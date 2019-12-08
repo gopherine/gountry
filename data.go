@@ -1,4 +1,4 @@
-package model
+package gountry
 
 //Country : data mapping for Gountry
 var Country = []CountryType {

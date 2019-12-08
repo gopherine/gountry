@@ -1,4 +1,4 @@
-package model
+package gountry
 
 //SubdivisionsType : Type definition for country subdivision which includes terit
 type SubdivisionsType struct {

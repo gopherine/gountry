@@ -1,25 +1,18 @@
-// package main
-
-// func main() {
-
-// }
-
 package gountry
 
 import (
 	"errors"
-	"github.com/gopherine/Gountry/model"
 	"strings"
 )
 
 //GetCountries returns list of all the countries
-func GetCountries() []model.CountryType {
-	return model.Country
+func GetCountries() []CountryType {
+	return Country
 }
 
 //GetCountryISO2 return country data based on the ISO(2) code passed
-func GetCountryISO2(ISO2 string) (*model.CountryType, error) {
-	countries := model.Country
+func GetCountryISO2(ISO2 string) (*CountryType, error) {
+	countries := Country
 	for _, country := range countries {
 		if country.ISO2 == ISO2 {
 			return &country, nil
@@ -29,8 +22,8 @@ func GetCountryISO2(ISO2 string) (*model.CountryType, error) {
 }
 
 //GetCountryISO3 return country data based on the ISO(2) code passed
-func GetCountryISO3(ISO3 string) (*model.CountryType, error) {
-	countries := model.Country
+func GetCountryISO3(ISO3 string) (*CountryType, error) {
+	countries := Country
 	for _, country := range countries {
 		if country.ISO3 == ISO3 {
 			return &country, nil
@@ -40,8 +33,8 @@ func GetCountryISO3(ISO3 string) (*model.CountryType, error) {
 }
 
 //GetCountryNumeric return country data based on the ISO(2) code passed
-func GetCountryNumeric(Numeric string) (*model.CountryType, error) {
-	countries := model.Country
+func GetCountryNumeric(Numeric string) (*CountryType, error) {
+	countries := Country
 	for _, country := range countries {
 		if country.Numeric == Numeric {
 			return &country, nil
@@ -51,8 +44,8 @@ func GetCountryNumeric(Numeric string) (*model.CountryType, error) {
 }
 
 //GetSubdivision return country data based on the ISO(2) code passed
-func GetSubdivision(Code string) (*model.SubdivisionsType, error) {
-	countries := model.Country
+func GetSubdivision(Code string) (*SubdivisionsType, error) {
+	countries := Country
 	ISO2 := strings.Split(Code, "-")[0]
 	for _, country := range countries {
 		if country.ISO2 == ISO2 {
