@@ -1,3 +1,7 @@
+// Copyright 2019 Atharva Pandey. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be found
+// in the LICENSE file.
+
 package gountry
 
 //SubdivisionsType : Type definition for country subdivision which includes terit

@@ -1,3 +1,45 @@
+// Copyright 2019 Atharva Pandey. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be found
+// in the LICENSE file.
+
+//Package gountry is a data mapping to extract country details , currency and subdivisions
+//The data is extracted and mapped on to go using python package pycountry but is open to change
+//as per community suggestion
+//
+//Example :
+//
+// package main
+//
+// import (
+// 	"fmt"
+// 	"github.com/gopherine/gountry"
+// )
+//
+// func main() {
+// 	// returns list of all country data
+// 	fmt.Println(gountry.GetCountries())
+//
+// 	//ISO2 returns one country data
+// 	fmt.Println(gountry.GetCountryISO2("NZ"))
+//
+// 	//ISO3 returns one country data
+// 	fmt.Println(gountry.GetCountryISO3("IND"))
+//
+// 	//Numeric returns one country data
+// 	fmt.Println(gountry.GetCountryNumeric("398"))
+//
+// 	//Returns specific subdivision data
+// 	fmt.Println(gountry.GetSubdivision("RS-KM"))
+//
+// 	//Refer godoc to view type definition to further get specific data for example
+// 	//gountry.GetCountryISO2("NZ").Currency
+// 	//currency
+// 	country, _ := gountry.GetCountryISO2("NZ")
+// 	fmt.Println(country.Currency)
+//
+// }
+
+
 package gountry
 
 import (
