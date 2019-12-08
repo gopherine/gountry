@@ -38,8 +38,6 @@
 // 	fmt.Println(country.Currency)
 //
 // }
-
-
 package gountry
 
 import (
