@@ -1,4 +1,4 @@
-module github.com/gopherine/Gountry
+module github.com/gopherine/gountry
 
 go 1.13
 
