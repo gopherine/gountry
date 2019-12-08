@@ -7,37 +7,37 @@
 //as per community suggestion
 //
 //Example :
-/*
-package main
-
-import (
-	"fmt"
-	"github.com/gopherine/gountry"
-)
-
-func main() {
-	// returns list of all country data
-	fmt.Println(gountry.GetCountries())
-
-	//ISO2 returns one country data
-	fmt.Println(gountry.GetCountryISO2("NZ"))
-
-	//ISO3 returns one country data
-	fmt.Println(gountry.GetCountryISO3("IND"))
-
-	//Numeric returns one country data
-	fmt.Println(gountry.GetCountryNumeric("398"))
-
-	//Returns specific subdivision data
-	fmt.Println(gountry.GetSubdivision("RS-KM"))
-
-	//Refer godoc to view type definition to further get specific data for example
-	//gountry.GetCountryISO2("NZ").Currency
-	//currency
-	country, _ := gountry.GetCountryISO2("NZ")
-	fmt.Println(country.Currency)
-
-}*/
+//
+// package main
+//
+// import (
+// 	"fmt"
+// 	"github.com/gopherine/gountry"
+// )
+//
+// func main() {
+// 	// returns list of all country data
+// 	fmt.Println(gountry.GetCountries())
+//
+// 	//ISO2 returns one country data
+// 	fmt.Println(gountry.GetCountryISO2("NZ"))
+//
+// 	//ISO3 returns one country data
+// 	fmt.Println(gountry.GetCountryISO3("IND"))
+//
+// 	//Numeric returns one country data
+// 	fmt.Println(gountry.GetCountryNumeric("398"))
+//
+// 	//Returns specific subdivision data
+// 	fmt.Println(gountry.GetSubdivision("RS-KM"))
+//
+// 	//Refer godoc to view type definition to further get specific data for example
+// 	//gountry.GetCountryISO2("NZ").Currency
+// 	//currency
+// 	country, _ := gountry.GetCountryISO2("NZ")
+// 	fmt.Println(country.Currency)
+//
+// }
 package gountry
 
 import (
