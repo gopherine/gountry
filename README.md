@@ -1,4 +1,4 @@
-[![GoDoc](https://godoc.org/github.com/gopherine/gountry?status.svg)](http://godoc.org/github.com/gopherine/gountry)[![Coverage Status](https://coveralls.io/repos/github/gopherine/gountry/badge.svg?branch=master)](https://coveralls.io/github/gopherine/gountry?branch=master)[![Build Status](https://travis-ci.org/gopherine/gountry.svg?branch=master)](https://travis-ci.org/gopherine/gountry)
+[![GoDoc](https://godoc.org/github.com/gopherine/gountry?status.svg)](http://godoc.org/github.com/gopherine/gountry)  [![Coverage Status](https://coveralls.io/repos/github/gopherine/gountry/badge.svg?branch=master)](https://coveralls.io/github/gopherine/gountry?branch=master)  [![Build Status](https://travis-ci.org/gopherine/gountry.svg?branch=master)](https://travis-ci.org/gopherine/gountry)
 
 # Gountry
 Gountry is a library to get direct mappings for country ,ISO-2 , ISO-3 , Currency
