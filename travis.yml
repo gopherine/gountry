@@ -2,3 +2,13 @@ language: go
 
 go:
 - tip # The latest version of Go.
+
+before_install:
+- go get golang.org/x/tools/cmd/cover
+- go get github.com/mattn/goveralls
+
+script:
+  - go test -v -covermode=count -coverprofile=coverage.out
+  - go vet ./...
+  - test -z "$(gofmt -d -s . | tee /dev/stderr)"
+  - $HOME/gopath/bin/goveralls  -coverprofile=coverage.out -service=travis-ci
