@@ -19,6 +19,10 @@ func TestGetCountryISO2(t *testing.T) {
 		if err != nil {
 			t.Errorf("Failed")
 		}
+		_, err = GetCountryISO2(country.ISO2 + "JUNK")
+		if err == nil {
+			t.Errorf("Failed")
+		}
 	}
 }
 
@@ -27,6 +31,10 @@ func TestGetCountryISO3(t *testing.T) {
 	for _, country := range countries {
 		_, err := GetCountryISO3(country.ISO3)
 		if err != nil {
+			t.Errorf("Failed")
+		}
+		_, err = GetCountryISO3(country.ISO3 + "JUNK")
+		if err == nil {
 			t.Errorf("Failed")
 		}
 	}
@@ -39,6 +47,10 @@ func TestGetCountryNumeric(t *testing.T) {
 		if err != nil {
 			t.Errorf("Failed")
 		}
+		_, err = GetCountryNumeric(country.Numeric + "222")
+		if err == nil {
+			t.Errorf("Failed")
+		}
 	}
 }
 
@@ -49,6 +61,10 @@ func TestGetSubdivision(t *testing.T) {
 		for _, subdivision := range subdivisions {
 			_, err := GetSubdivision(subdivision.Code)
 			if err != nil {
+				t.Errorf("Failed")
+			}
+			_, err = GetSubdivision(subdivision.Code + "JUNK")
+			if err == nil {
 				t.Errorf("Failed")
 			}
 		}
