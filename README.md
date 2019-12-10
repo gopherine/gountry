@@ -1,13 +1,12 @@
-[![GoDoc](https://godoc.org/github.com/gopherine/gountry?status.svg)](http://godoc.org/github.com/gopherine/gountry)  [![Coverage Status](https://coveralls.io/repos/github/gopherine/gountry/badge.svg?branch=master)](https://coveralls.io/github/gopherine/gountry?branch=master)  [![Build Status](https://travis-ci.org/gopherine/gountry.svg?branch=master)](https://travis-ci.org/gopherine/gountry)
+# Gountry [![GoDoc](https://godoc.org/github.com/gopherine/gountry?status.svg)](http://godoc.org/github.com/gopherine/gountry)  [![Coverage Status](https://coveralls.io/repos/github/gopherine/gountry/badge.svg?branch=master)](https://coveralls.io/github/gopherine/gountry?branch=master)  [![Build Status](https://travis-ci.org/gopherine/gountry.svg?branch=master)](https://travis-ci.org/gopherine/gountry)
+---
 
-# Gountry
-Gountry is a library to get direct mappings for country ,ISO-2 , ISO-3 , Currency
+Gountry is a library to get direct mappings for country ,ISO-3166 Countries , ISO-3166-2 Subdivisions,ISO-4217 Currency.
 
+This package maps ISO data directly to Go Structs resulting in high performance extraction. Changes to data and updation to data will be accepted as long as it is standardized.
 
-package gountry
-import "github.com/gopherine/gountry"
-
-```Package gountry is a data mapping to extract country details , currency and subdivisions The data is extracted and mapped on to go using python package pycountry but is open to change as per community suggestion
+```go
+Package gountry is a data mapping to extract country details , currency and subdivisions The data is extracted and mapped on to go using python package pycountry but is open to change as per community suggestion
 
 Example :
 
@@ -44,17 +43,11 @@ fmt.Println(country.Currency)
 }
 ```
 
-## Variables
+Data is stored in data.go this will renamed as more data is added
 
-```
-var Country = []CountryType{ /* 249 elements not displayed */
+Country : Type definition for getting countries ISO-3166 and currency ISO-4217
 
-}
-```
-
-Country : data mapping for Gountry
-
-```
+```go
 type CountryType
 type CountryType struct {
     Country      string             `json:"Country"`
@@ -66,25 +59,10 @@ type CountryType struct {
     Subdivisions []SubdivisionsType `json:"Subdivisions"`
 }
 ```
-CountryType : Type definition for country
 
-func GetCountries
-func GetCountries() []CountryType
-GetCountries returns list of all the countries
 
-func GetCountryISO2
-func GetCountryISO2(ISO2 string) (*CountryType, error)
-GetCountryISO2 return country data based on the ISO(2) code passed
-
-func GetCountryISO3
-func GetCountryISO3(ISO3 string) (*CountryType, error)
-GetCountryISO3 return country data based on the ISO(2) code passed
-
-func GetCountryNumeric
-func GetCountryNumeric(Numeric string) (*CountryType, error)
-GetCountryNumeric return country data based on the ISO(2) code passed
-
-```
+SubdivisionsType : Type definition for country subdivision ISO-3166-2
+```go
 type SubdivisionsType
 type SubdivisionsType struct {
     Code       string `json:"Code"`
@@ -95,8 +73,18 @@ type SubdivisionsType struct {
 }
 ```
 
-SubdivisionsType : Type definition for country subdivision which includes terit
+Contribution:
 
-func GetSubdivision
-func GetSubdivision(Code string) (*SubdivisionsType, error)
-GetSubdivision return country data based on the ISO(2) code passed
+- [X] Create an issue on github repo.
+- [X] Fork the project and create a pull request.
+- [X] Keep the name of your branch similar to the issue you are trying to solve.
+- [X] Remember to run tests and gofmt before pull as it will fail while building via travis otherwise
+
+TODO:
+
+- [X] Create a local go data mapping for countries and subdivisions.
+- [ ] Create a local go data mapping for cities in every country.
+- [ ] Create a local go data mapping for language script.
+- [ ] Improve performance.
+
+Note :: Every data should be searchable via the main countries package i.e should work more like query tables and foreign keys.
