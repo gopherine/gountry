@@ -23,3 +23,13 @@ type CountryType struct {
 	Code         string             `json:"Code"`
 	Subdivisions []SubdivisionsType `json:"Subdivisions"`
 }
+
+
+//TimezoneType : Type definition for timezone,capital and continent
+type TimezoneType struct {
+	Timezones []string `json:"Timezones"`
+	Code      string   `json:"Code"`
+	Continent string   `json:"Continent"`
+	Name      string   `json:"Name"`
+	Capital   string   `json:"Capital"`
+}
