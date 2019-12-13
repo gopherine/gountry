@@ -1,8 +1,11 @@
 # Gountry [![GoDoc](https://godoc.org/github.com/gopherine/gountry?status.svg)](http://godoc.org/github.com/gopherine/gountry)  [![Build Status](https://travis-ci.org/gopherine/gountry.svg?branch=master)](https://travis-ci.org/gopherine/gountry)  [![Coverage Status](https://coveralls.io/repos/github/gopherine/gountry/badge.svg?branch=master)](https://coveralls.io/github/gopherine/gountry?branch=master)
 
+<img src="/logo.png" alt="Gountry"
+	title="A cute kitten" width="300" height="300" />
+
 Gountry is a library to get direct mappings for country ,ISO-3166 Countries , ISO-3166-2 Subdivisions,ISO-4217 Currency.
 
-This package maps ISO data directly to Go Structs resulting in high performance extraction. Changes to data and updation to data will be accepted as long as it is standardized.
+This package maps ISO data directly to Go Structs resulting in high performance extraction. Changes to data and addition to data will be accepted as long as it is standardized.
 
 ```go
 Package gountry is a data mapping to extract country details , currency and subdivisions The data is extracted and mapped on to go using python package pycountry but is open to change as per community suggestion
