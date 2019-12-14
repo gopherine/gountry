@@ -99,3 +99,20 @@ func GetSubdivision(Code string) (*SubdivisionsType, error) {
 	}
 	return nil, errors.New(Code + ",is a invalid Subdivision Code or not mapped - please check again.")
 }
+
+/* TIME ZONE */
+
+//GetTimezones returns list of all the timezones,capitals and continents
+func GetTimezones() []TimezoneType {
+	return Timezones
+}
+
+//GetTimezoneISO2 return country data based on the ISO(2) code passed
+func GetTimezoneISO2(ISO2 string) (*TimezoneType, error) {
+	for _, t := range Timezones {
+		if t.ISO2 == ISO2 {
+			return &t, nil
+		}
+	}
+	return nil, errors.New(ISO2 + ",is a invalid ISO3 or not mapped - please check again.")
+}
