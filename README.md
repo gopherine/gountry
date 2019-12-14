@@ -1,7 +1,8 @@
 # Gountry [![GoDoc](https://godoc.org/github.com/gopherine/gountry?status.svg)](http://godoc.org/github.com/gopherine/gountry)  [![Build Status](https://travis-ci.org/gopherine/gountry.svg?branch=master)](https://travis-ci.org/gopherine/gountry)  [![Coverage Status](https://coveralls.io/repos/github/gopherine/gountry/badge.svg?branch=master)](https://coveralls.io/github/gopherine/gountry?branch=master)
 
-<p align="center"><img src="/logo.png" alt="Gountry"
-	title="A cute kitten" width="300" height="300" /></p>
+<p align="center">
+    <img src="/logo.png" alt="Gountry" title="A cute kitten" width="300" height="300" />
+</p>
 
 Gountry is a library to get direct mappings for country ,ISO-3166 Countries , ISO-3166-2 Subdivisions,ISO-4217 Currency.
 
@@ -62,8 +63,8 @@ type CountryType struct {
 }
 ```
 
-
 SubdivisionsType : Type definition for country subdivision ISO-3166-2
+
 ```go
 type SubdivisionsType
 type SubdivisionsType struct {
@@ -90,3 +91,7 @@ TODO:
 - [ ] Improve performance.
 
 Note :: Every data should be searchable via the main countries package i.e should work more like query tables and foreign keys.
+
+Credits :
+
+1. Data Extracted using [Pycountry](https://pypi.org/project/pycountry/)
